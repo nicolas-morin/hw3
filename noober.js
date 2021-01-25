@@ -8,14 +8,20 @@ function pageLoad() {
   // e.g. ask 'ride' for its length or only grab the first member of the Array
   console.log(ride);
 
-  numberOfPassengers = rideData.length;
+  var i = 0;
+  var j = 1;
+  var k = 2;
 
-  if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
-    levelOfService = "Noober Pool";
-  } else if ((ride.purplerequested = true)) {
-    levelOfService = "Noober Purple";
-  } else if (ride.numberOfPassenger > 3) {
+  if (ride[i].numberOfPassengers > 3) {
     levelOfService = "Noober XL";
+    j = "";
+    k = "";
+  } else if (ride[i].purpleRequested == true) {
+    levelOfService = "Noober Purple";
+    j = "";
+    k = "";
+  } else if (ride.length > 1 && ride[i].numberOfPassengers == 1) {
+    levelOfService = "Noober Pool";
   } else {
     levelOfService = "Noober X";
   }
@@ -23,22 +29,23 @@ function pageLoad() {
   console.log(levelOfService);
 
   passenger1Name =
-    ride[0].passengerDetails.first + " " + ride[0].passengerDetails.last;
-  passenger1Phone = ride[0].passengerDetails.phoneNumber;
-  passenger1NumberOfPassengers = ride[0].passengerDetails.numberOfPassenger;
-  passenger1PickupAddressLine1 = ride[0].pickupLocation.address;
+    ride[i].passengerDetails.first + " " + ride[i].passengerDetails.last;
+  passenger1Phone = ride[i].passengerDetails.phoneNumber;
+  passenger1NumberOfPassengers = ride[i].numberOfPassengers;
+  passenger1PickupAddressLine1 = ride[i].pickupLocation.address;
   passenger1PickupAddressLine2 =
-    ride[0].pickupLocation.city +
+    ride[i].pickupLocation.city +
     ", " +
-    ride[0].pickupLocation.state +
-    ride[0].pickupLocation.zip;
-  passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address;
+    ride[i].pickupLocation.state +
+    ", " +
+    ride[i].pickupLocation.zip;
+  passenger1DropoffAddressLine1 = ride[i].dropoffLocation.address;
   passenger1DropoffAddressLine2 =
-    ride[0].dropoffLocation.city +
+    ride[i].dropoffLocation.city +
     ", " +
-    ride[0].dropoffLocation.state +
-    " ," +
-    ride[0].dropoffLocation.zip;
+    ride[i].dropoffLocation.state +
+    ", " +
+    ride[i].dropoffLocation.zip;
 
   console.log(passenger1Name);
   console.log(passenger1Phone);
@@ -49,22 +56,23 @@ function pageLoad() {
   console.log(passenger1DropoffAddressLine2);
 
   passenger2Name =
-    ride[1].passengerDetails.first + " " + ride[1].passengerDetails.last;
-  passenger2Phone = ride[1].passengerDetails.phoneNumber;
-  passenger2NumberOfPassengers = ride[1].passengerDetails.numberOfPassenger;
-  passenger2PickupAddressLine1 = ride[1].pickupLocation.address;
+    ride[j].passengerDetails.first + " " + ride[j].passengerDetails.last;
+  passenger2Phone = ride[j].passengerDetails.phoneNumber;
+  passenger2NumberOfPassengers = ride[j].numberOfPassengers;
+  passenger2PickupAddressLine1 = ride[j].pickupLocation.address;
   passenger2PickupAddressLine2 =
-    ride[1].pickupLocation.city +
+    ride[j].pickupLocation.city +
     ", " +
-    ride[1].pickupLocation.state +
-    ride[1].pickupLocation.zip;
-  passenger2DropoffAddressLine1 = ride[1].dropoffLocation.address;
+    ride[j].pickupLocation.state +
+    ", " +
+    ride[j].pickupLocation.zip;
+  passenger2DropoffAddressLine1 = ride[j].dropoffLocation.address;
   passenger2DropoffAddressLine2 =
-    ride[1].dropoffLocation.city +
+    ride[j].dropoffLocation.city +
     ", " +
-    ride[1].dropoffLocation.state +
-    " ," +
-    ride[1].dropoffLocation.zip;
+    ride[j].dropoffLocation.state +
+    ", " +
+    ride[j].dropoffLocation.zip;
 
   console.log(passenger2Name);
   console.log(passenger2Phone);
@@ -73,6 +81,34 @@ function pageLoad() {
   console.log(passenger2PickupAddressLine2);
   console.log(passenger2DropoffAddressLine1);
   console.log(passenger2DropoffAddressLine2);
+
+  passenger3Name =
+    ride[k].passengerDetails.first + " " + ride[k].passengerDetails.last;
+  passenger3Phone = ride[k].passengerDetails.phoneNumber;
+  passenger3NumberOfPassengers = ride[k].numberOfPassengers;
+  passenger3PickupAddressLine1 = ride[k].pickupLocation.address;
+  passenger3PickupAddressLine2 =
+    ride[k].pickupLocation.city +
+    ", " +
+    ride[k].pickupLocation.state +
+    ", " +
+    ride[k].pickupLocation.zip;
+  passenger3DropoffAddressLine1 = ride[k].dropoffLocation.address;
+  passenger3DropoffAddressLine2 =
+    ride[k].dropoffLocation.city +
+    ", " +
+    ride[k].dropoffLocation.state +
+    ", " +
+    ride[k].dropoffLocation.zip;
+
+  console.log(passenger3Name);
+  console.log(passenger3Phone);
+  console.log(passenger3NumberOfPassengers);
+  console.log(passenger3PickupAddressLine1);
+  console.log(passenger3PickupAddressLine2);
+  console.log(passenger3DropoffAddressLine1);
+  console.log(passenger3DropoffAddressLine2);
+
   // these variables map to the elements on the finished page;
   // assign the proper value to each variable
 
